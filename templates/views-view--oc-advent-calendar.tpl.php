@@ -1,5 +1,6 @@
 <?php if ($header): ?>
     <div class="oc-advent-view-header">
+      <?php print "<h2>".$view->get_title()."</h2>"; ?>
       <?php print $header; ?>
     </div>
 <?php endif; ?>
