@@ -1,5 +1,8 @@
-<?php
-?>
+<?php if ($header): ?>
+    <div class="oc-advent-view-header">
+      <?php print $header; ?>
+    </div>
+<?php endif; ?>
 <div class="advent-calendar-frame">
     <?php foreach($view->result as $index => $node) { ?>
     <div class="advent-calendar-gate-wrapper">
@@ -20,7 +23,7 @@
         </div>
     <div class="advent-calendar-modal-content-wrap">
         <div class="advent-calendar-modal-header">
-            <img src="/sites/all/modules/custom/oc_advent_calendar/images/xmas-advent-calendar-header-5.png">
+            
         </div>
         <div class="advent-calendar-modal-body">aaaa</div>
         <div class="advendt-calendar-close-button">
