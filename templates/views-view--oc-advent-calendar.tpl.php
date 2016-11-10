@@ -1,0 +1,30 @@
+<?php
+?>
+<div class="advent-calendar-frame">
+    <?php foreach($view->result as $index => $node) { ?>
+    <div class="advent-calendar-gate-wrapper">
+        <div class="advent-calendar-background-image ">
+            <?php if($node->file_managed_field_data_field_advent_image_uri == null){ ?>
+            <img class="advent-calendar-day-image" src="/sites/all/modules/custom/oc_advent_calendar/images/xmas-advent-calendar-image-<?php echo $index+1 ?>.png" />
+            <?php }else { ?>
+            <img class="advent-calendar-day-image" src="<?php echo file_create_url($node->file_managed_field_data_field_advent_image_uri) ?>" />
+            <?php }?>
+            <span class="advent-calendar-day-text"><?php echo $node->field_data_field_position_field_position_value  ?></span>
+            <div class="advent-calendar-day-content-modal"><?php echo isset($node->field_body[0]) ? $node->field_body[0]['rendered']['#markup'] : '' ?></div>
+        </div>
+     </div>
+    <?php }?>
+</div>
+<div class="advent-calendar-modal-wrapper">
+            <div id="snow">
+        </div>
+    <div class="advent-calendar-modal-content-wrap">
+        <div class="advent-calendar-modal-header">
+            <img src="/sites/all/modules/custom/oc_advent_calendar/images/xmas-advent-calendar-header-5.png">
+        </div>
+        <div class="advent-calendar-modal-body">aaaa</div>
+        <div class="advendt-calendar-close-button">
+            <img alt="modal close image" title="modal close image" src="/sites/all/modules/custom/oc_advent_calendar/images/close-icon.png">
+	</div>
+   </div>
+</div>

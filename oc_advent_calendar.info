@@ -1,0 +1,6 @@
+name = oc_advent_calendar
+description = x-mas calendar
+core = 7.x
+version = "7.x-1.0"
+package = Advent calendar
+dependencies[] = advent_calendar

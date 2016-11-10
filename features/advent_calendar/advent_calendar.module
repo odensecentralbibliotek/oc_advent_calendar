@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the advent calendar feature.
+ */
+
+include_once 'advent_calendar.features.inc';

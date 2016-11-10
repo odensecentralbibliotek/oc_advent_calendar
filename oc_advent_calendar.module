@@ -1,0 +1,20 @@
+<?php
+/**
+* Implements hook_views_api().
+*
+* Enabling using templates inside module
+*/
+function oc_advent_calendar_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'oc_advent_calendar'),
+    'template path' => drupal_get_path('module', 'oc_advent_calendar') . "/templates",
+  );
+}
+function oc_advent_calendar_views_pre_render ( &$view ) { 
+  /// check to make sure the view has a classname
+  if ( $view->name == "oc_advent_calendar")  {
+      drupal_add_js(drupal_get_path('module', 'oc_advent_calendar') ."/js/oc_advent_calendar.js");
+      drupal_add_css(drupal_get_path('module', 'oc_advent_calendar') ."/css/oc-advent-calendar.css");
+  }
+}

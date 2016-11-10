@@ -1,0 +1,193 @@
+.advent-calendar-frame
+{
+    border-radius: 2%;
+    width: 97%;
+    padding:10px;
+    background-color: red;
+    
+}
+.advent-calendar-background-wrapper
+{
+
+}
+.advent-calendar-gate-wrapper
+{
+    width: 23%;
+    height: 25%;
+    background-image: url('/sites/all/modules/custom/oc_advent_calendar/images/xmas-advent-calendar-open-day-big.png');
+    background-size: 89% 70%;
+    background-repeat: no-repeat;
+    background-position: 49% 49%;
+    position: relative;
+    display: inline-block;
+}
+.advent-calendar-day-image{
+    height: 120%!important;
+    width: 120%!important;
+    max-width: 120%!important;
+    margin-left: -10%!important;
+    margin-top: -10%!important;
+}
+.advent-calendar-day-text
+{
+    top: 37px;
+    bottom: auto;
+    left: auto;
+    right: 15px;
+    position:absolute;
+    font-weight: bold;
+    font-size: 45px;
+}
+.advent-calendar-background-image
+{
+    cursor: pointer;
+    width:100%;
+    height: 100%;
+
+    -webkit-transition: all 500ms ease-out!important;
+    -moz-transition: all 500ms ease-out!important;
+    -o-transition: all 500ms ease-out!important;
+    transition: all 500ms ease-out!important;
+    -webkit-transform-origin: left;  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform-origin: left;  /* IE 9 */
+    transform-origin: left;
+}
+.advent-calendar-gate-open
+{
+    -webkit-transform: rotateY(85deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotateY(85deg);  /* IE 9 */
+    transform: rotateY(85deg);
+    -webkit-transform-origin: left;  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform-origin: left;  /* IE 9 */
+    transform-origin: left;
+    -webkit-transition: all 500ms ease-out!important;
+    -moz-transition: all 500ms ease-out!important;
+    -o-transition: all 500ms ease-out!important;
+    transition: all 500ms ease-out!important;
+}
+.advent-calendar-modal-wrapper
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999;
+    overflow-y: hide;
+    overflow-x: hide;
+    display:none;
+}
+.advent-calendar-modal-header
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 110%;
+    margin-left: 1%;
+    
+    transform: translateY(-56%);
+}
+.advent-calendar-modal-body
+{
+     position: absolute;
+    overflow: auto;
+    z-index: 20;
+    padding-top:74px;
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.advent-calendar-modal-content-wrap
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 600px;
+    height: 460px;
+    max-width: 95%;
+    max-height: 95%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #c73336;
+}
+.advendt-calendar-close-button
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 50%;
+    background: white;
+    z-index: 10;
+    cursor: pointer;
+    text-align: right;
+    z-index: 99999;
+}
+.advendt-calendar-close-button img
+{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 9px;
+    top: 10px;
+}
+.advent-calendar-day-content-modal{
+    display:none;
+}
+.advent-calendar-modal-wrapper-show
+{
+    display: block !important;
+    -webkit-transform: translateY(0px);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateY(0px);  /* IE 9 */
+    transform: translateY(0px);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+#snow {
+    top: -100%;
+    bottom: -50px;
+    left: -100%;
+    right: -100%;
+    z-index: 1;
+    background-image: url('/sites/all/modules/custom/oc_advent_calendar/images/snow1.png'), url('/sites/all/modules/custom/oc_advent_calendar/images/snow3.png'), url('/sites/all/modules/custom/oc_advent_calendar/images/snow2.png');
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+    position: absolute;
+}
+@keyframes snow {
+0% {
+    background-position: 0 0px, 0 0px, 0 0;
+}
+100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+}
+}
+@keyframes snow {
+0% {
+    background-position: 0 0px, 0 0px, 0 0;
+}
+100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+}
+}
+@keyframes snow {
+0% {
+    background-position: 0 0px, 0 0px, 0 0;
+}
+100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+}
+}
+
