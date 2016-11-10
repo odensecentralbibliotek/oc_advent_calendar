@@ -20,6 +20,7 @@
     background-position: 49% 49%;
     position: relative;
     display: inline-block;
+    z-index: 0;
 }
 .advent-calendar-day-image{
     height: 120%!important;
@@ -37,6 +38,7 @@
     position:absolute;
     font-weight: bold;
     font-size: 45px;
+    z-index: 0;
 }
 .advent-calendar-background-image
 {
@@ -73,9 +75,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.7);
-    z-index: 9999;
+    z-index: 1000;
     overflow-y: hide;
-    overflow-x: hide;
+    
     display:none;
 }
 .advent-calendar-modal-header
