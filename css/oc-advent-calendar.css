@@ -94,12 +94,13 @@
 .advent-calendar-modal-body
 {
      position: absolute;
-    overflow: auto;
+    overflow: hidden;
     padding-top:74px;
     width: 90%;
     text-align: center;
     color: white;
     font-size: 16px;
+    height: 90%;
 }
 .advent-calendar-modal-content-wrap
 {
