@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 jQuery(document).ready(function($){
-    $('.advent-calendar-gate-wrapper').click(function(){
+    $('.advent-calendar-can-open').click(function(){
         $(this).find('.advent-calendar-background-image').toggleClass('advent-calendar-gate-open');
         var modalbody = $(this).find('.advent-calendar-day-content-modal').html();
          $('.advent-calendar-modal-wrapper').find('.advent-calendar-modal-body').html(modalbody);
