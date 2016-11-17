@@ -1,6 +1,6 @@
 <?php
 $transdate = date('m-d-Y', time());
-$is_december  = date('m') == 12 ? true : false;
+$is_december  = true; //date('m') == 12 ? true : false;
 $cur_date = date('d');
 ?>
 <?php if ($header): ?>
