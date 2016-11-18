@@ -22,7 +22,7 @@ function advent_calendar_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'OC advent calendar';
+  $handler->display->display_options['title'] = 'Bibliotekets julekalender';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -38,6 +38,14 @@ function advent_calendar_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '24';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Overskrift: Global: Tekstområde */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Få inspiration og deltag i bibliotekets julekalender.
+
+Rigtig god fornøjelse og glædelig jul fra biblioteket. ';
+  $handler->display->display_options['header']['area']['format'] = 'ding_wysiwyg';
   /* Forbindelse: Indhold: advent_image (field_advent_image:fid) */
   $handler->display->display_options['relationships']['field_advent_image_fid']['id'] = 'field_advent_image_fid';
   $handler->display->display_options['relationships']['field_advent_image_fid']['table'] = 'field_data_field_advent_image';
@@ -94,16 +102,19 @@ function advent_calendar_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'oc-advent-calendar';
+  $handler->display->display_options['path'] = 'julekalender';
   $translatables['oc_advent_calendar'] = array(
     t('Master'),
-    t('OC advent calendar'),
+    t('Bibliotekets julekalender'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
+    t('Få inspiration og deltag i bibliotekets julekalender.
+
+Rigtig god fornøjelse og glædelig jul fra biblioteket. '),
     t('billede fra field_advent_image'),
     t('Page'),
   );

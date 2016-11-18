@@ -1,8 +1,8 @@
 name = advent calendar
-description = Julekalender features.
+description = Odensebib julekalender
 core = 7.x
-package = Features
-version = 7.x-1.0
+package = OC
+version = 7.x-1.1
 project = advent_calendar
 dependencies[] = features
 dependencies[] = list
