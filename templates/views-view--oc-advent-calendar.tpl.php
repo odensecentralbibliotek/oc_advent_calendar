@@ -14,7 +14,7 @@ $cur_date = date('d');
     <div class="advent-calendar-gate-wrapper <?php echo $index < $cur_date && $is_december ? 'advent-calendar-can-open' : ''  ?>">
         <div class="advent-calendar-background-image ">
             <?php if($node->file_managed_field_data_field_advent_image_uri == null){ ?>
-                <img class="advent-calendar-day-image" src="/sites/all/modules/custom/oc_advent_calendar/images/xmas-advent-calendar-image-<?php echo $index+1 ?>.png" />
+                <img class="advent-calendar-day-image" src="/sites/all/modules/custom/oc_advent_calendar/images/<?php echo $index+1 ?>.png" />
             <?php }else { ?>
                 <img class="advent-calendar-day-image" src="<?php echo file_create_url($node->file_managed_field_data_field_advent_image_uri) ?>" />
             <?php }?>
@@ -35,7 +35,7 @@ $cur_date = date('d');
         </div>
         <div class="advent-calendar-modal-body">aaaa</div>
         <div class="advendt-calendar-close-button">
-            <img alt="modal close image" title="modal close image" src="/sites/all/modules/custom/oc_advent_calendar/images/close-icon.png">
+            <img title="Luk" src="/sites/all/modules/custom/oc_advent_calendar/images/close-icon.png">
 	</div>
    </div>
 </div>
