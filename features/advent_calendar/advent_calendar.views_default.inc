@@ -46,6 +46,12 @@ function advent_calendar_views_default_views() {
 
 Rigtig god fornøjelse og glædelig jul fra biblioteket. ';
   $handler->display->display_options['header']['area']['format'] = 'ding_wysiwyg';
+  /* Sidefod: Global: Tekstområde */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = 'Foto: colorbox';
+  $handler->display->display_options['footer']['area']['format'] = 'ding_wysiwyg';
   /* Forbindelse: Indhold: advent_image (field_advent_image:fid) */
   $handler->display->display_options['relationships']['field_advent_image_fid']['id'] = 'field_advent_image_fid';
   $handler->display->display_options['relationships']['field_advent_image_fid']['table'] = 'field_data_field_advent_image';
@@ -115,6 +121,7 @@ Rigtig god fornøjelse og glædelig jul fra biblioteket. ';
     t('Få inspiration og deltag i bibliotekets julekalender.
 
 Rigtig god fornøjelse og glædelig jul fra biblioteket. '),
+    t('Foto: colorbox'),
     t('billede fra field_advent_image'),
     t('Page'),
   );

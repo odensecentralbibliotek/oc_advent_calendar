@@ -26,6 +26,9 @@ $cur_date = date('d');
      </div>
     <?php }?>
 </div>
+<?php if ($footer): ?>
+<?php print $footer; ?>
+<?php endif;?>
 <div class="advent-calendar-modal-wrapper">
             <div id="snow">
         </div>
