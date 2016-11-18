@@ -1,7 +1,7 @@
 <?php
 $transdate = date('m-d-Y', time());
 $is_december  = true; //date('m') == 12 ? true : false;
-$cur_date = date('d');
+$cur_date = 24;// date('d');
 ?>
 <?php if ($header): ?>
     <div class="oc-advent-view-header">
