@@ -95,7 +95,7 @@
 {
      position: absolute;
     overflow: hidden;
-    padding-top:74px;
+    padding-top:10px;
     width: 90%;
     text-align: center;
     color: white;
@@ -171,6 +171,28 @@
 {
     margin-bottom:10px;
     padding:10px;
+}
+.advent-calendar-enable-contact-day-index
+{
+    display:none;
+}
+/*
+* Contact form
+*/
+.advent-calendar-enable-contact-form
+{
+    display:none;
+}
+.advent-calendar-modal-contact-form form input,.advent-calendar-modal-contact-form form textarea
+{
+    width:100%;
+}
+.advent-calendar-modal-contact-form form textarea{
+   resize: vertical; 
+}
+.advent-calendar-modal-contact-form-msg
+{
+    display:none;
 }
 @keyframes snow {
 0% {
