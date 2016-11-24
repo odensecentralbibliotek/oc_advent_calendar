@@ -102,7 +102,7 @@
     font-size: 16px;
     height: 90%;
 }
-.advent-calendar-modal-body-text a:link
+.advent-calendar-modal-body-text a:link,.advent-calendar-modal-body-text a:visited
 {
     color: white !important;
     text-decoration: underline !important;
