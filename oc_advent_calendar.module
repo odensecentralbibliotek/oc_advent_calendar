@@ -70,7 +70,7 @@ function oc_advent_calendar_contact_form()
                 'id' => $my_module . '_' . $my_mail_token,
                 'to' => variable_get('oc_advent_lottery_email', ''),
                 'subject' => $_GET['Dayindex'] ." december",
-                'body' => array($_GET['Navn']." svarer:<br/><br/>".$_GET['Text'] + "<br/><br/> Telefon: " . $_GET['Tlf']),
+                'body' => array($_GET['Navn']." svarer:<br/><br/>".$_GET['Text'] . "<br/><br/> Telefon: " . $_GET['Tlf']),
                 'headers' => array(
                     'From' => $from,
                     'Sender' => $from,
