@@ -22,7 +22,7 @@ global $user;
             <span class="advent-calendar-day-text"><?php echo $node->field_data_field_position_field_position_value  ?></span>
             <?php if(($index <= $cur_date && $is_december) || oc_advent_calendar_user_has_role('redaktør') || oc_advent_calendar_user_has_role('administrator')) { ?>
                 <div class="advent-calendar-day-content-modal"><?php echo isset($node->field_body[0]) ? $node->field_body[0]['rendered']['#markup'] : '' ?></div>
-                <?php if($cur_date == $index+1){ ?>
+                <?php if($cur_date == $index+1 || (oc_advent_calendar_user_has_role('redaktør') || oc_advent_calendar_user_has_role('administrator'))){ ?>
                 <div class="advent-calendar-enable-contact-form"><?php echo isset($node->field_field_konkurrence[0]) ?  $node->field_field_konkurrence[0]['raw']['value'] : 0 ?></div>
                 <?php }else{ ?>
                 <div class="advent-calendar-enable-contact-form"><?php echo isset($node->field_field_konkurrence[0]) ?  -1 : 0 ?></div>
