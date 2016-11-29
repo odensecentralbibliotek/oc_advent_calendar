@@ -27,29 +27,47 @@ function oc_advent_calendar_views_pre_render ( &$view ) {
  */
 function oc_advent_calendar_menu() {
   $items = array();
-  
    $items['oc/advent/ajax/response'] = array(
     'page callback' => 'oc_advent_calendar_contact_form', // Render HTML
     'description' => 'Handles contact form ajax requests from the calendar',
     'type' => MENU_CALLBACK,
     'access arguments' => array('access content'),
    );
-  
+  $items['admin/settings/oc_advent_calendar'] = array(
+    'title' => 'OC advent calendar',
+    'description' => 'Configuration julekalender',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('oc_advent_calendar_admin'),
+    'access arguments' => array('administer advent-kalendar'),
+    'file' => 'includes/oc_advent_calendar.admin.inc'
+   );
   return $items;
+}
+/**
+ * Implements hook_permission().
+ */
+function oc_advent_calendar_permission() {
+  return array(
+    'administer advent-kalendar' => array(
+      'title' => t('administer advent-kalendar'),
+      'description' => t('Giver adgang til configuere julekalenderen'),
+
+    )
+  );
 }
 function oc_advent_calendar_contact_form()
 {
     /*
      * Send a email to the competition managers.
      */
-    if(isset($_GET['Email']) && $_GET['Dayindex'] && $_GET['Navn'] && $_GET['Text'] && $_GET['Tlf'])
+    if(isset($_GET['Email']) && $_GET['Dayindex'] && $_GET['Navn'] && $_GET['Text'] && $_GET['Tlf'] && !empty(variable_get('oc_advent_lottery_email', '')))
     {
      $from = $_GET['Email'];
      $my_module = 'oc_advent_calendar';
      $my_mail_token = microtime();
      $message = array(
                 'id' => $my_module . '_' . $my_mail_token,
-                'to' => 'tfpet@odense.dk',
+                'to' => variable_get('oc_advent_lottery_email', ''),
                 'subject' => $_GET['Dayindex'] ." december",
                 'body' => array($_GET['Navn']." svarer:<br/><br/>".$_GET['Text'] + "<br/><br/> Telefon: " + $_GET['Tlf']),
                 'headers' => array(
