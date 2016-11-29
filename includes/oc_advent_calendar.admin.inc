@@ -9,6 +9,6 @@ function oc_advent_calendar_admin()
           'placeholder' => t('Email som modtager kontakt formular svar.'),
       ),
       '#description' => t('Email som modtager kontakt formular svar.'),
-  );
-     return $form;
+    );
+     return system_settings_form($form);
 }
