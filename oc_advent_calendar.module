@@ -60,7 +60,8 @@ function oc_advent_calendar_contact_form()
     /*
      * Send a email to the competition managers.
      */
-    if(isset($_GET['Email']) && $_GET['Dayindex'] && $_GET['Navn'] && $_GET['Text'] && $_GET['Tlf'] && !empty(variable_get('oc_advent_lottery_email', '')))
+    $tmp = variable_get('oc_advent_lottery_email', '');
+    if(isset($_GET['Email']) && $_GET['Dayindex'] && $_GET['Navn'] && $_GET['Text'] && $_GET['Tlf'] && !empty($tmp))
     {
      $from = $_GET['Email'];
      $my_module = 'oc_advent_calendar';
