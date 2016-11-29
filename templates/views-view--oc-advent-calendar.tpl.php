@@ -1,7 +1,7 @@
 <?php
 $transdate = date('m-d-Y', time());
 $is_december  = date('m') == 12 ? true : false;
-$cur_date = 2;// date('d');
+$cur_date = date('d');
 global $user;
 ?>
 <?php if ($header): ?>

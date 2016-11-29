@@ -115,7 +115,6 @@ jQuery(document).ready(function($){
      */
     function advent_form_validate()
     {
-        
         var data = $('.advent-calendar-modal-contact-form form').serializeArray();
         var has_errors = false;
         $.each(data,function(index,obj){
