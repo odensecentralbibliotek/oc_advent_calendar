@@ -1,7 +1,7 @@
 <?php
 $transdate = date('m-d-Y', time());
 $is_december  = date('m') == 12 ? true : false;
-$cur_date =  date('d');
+$cur_date = 2;// date('d');
 global $user;
 ?>
 <?php if ($header): ?>
@@ -20,12 +20,12 @@ global $user;
                 <img class="advent-calendar-day-image" src="<?php echo file_create_url($node->file_managed_field_data_field_advent_image_uri) ?>" />
             <?php }?>
             <span class="advent-calendar-day-text"><?php echo $node->field_data_field_position_field_position_value  ?></span>
-            <?php if(($index < $cur_date && $is_december) || oc_advent_calendar_user_has_role('redaktør') || oc_advent_calendar_user_has_role('administrator')) { ?>
+            <?php if(($index <= $cur_date && $is_december) || oc_advent_calendar_user_has_role('redaktør') || oc_advent_calendar_user_has_role('administrator')) { ?>
                 <div class="advent-calendar-day-content-modal"><?php echo isset($node->field_body[0]) ? $node->field_body[0]['rendered']['#markup'] : '' ?></div>
                 <?php if($cur_date == $index+1){ ?>
                 <div class="advent-calendar-enable-contact-form"><?php echo isset($node->field_field_konkurrence[0]) ?  $node->field_field_konkurrence[0]['raw']['value'] : 0 ?></div>
                 <?php }else{ ?>
-                <div class="advent-calendar-enable-contact-form">0</div>
+                <div class="advent-calendar-enable-contact-form"><?php echo isset($node->field_field_konkurrence[0]) ?  -1 : 0 ?></div>
                 <?php } ?>
                 <div class="advent-calendar-enable-contact-day-index"><?php echo $index+1 ?></div>
             <?php }?>
@@ -44,22 +44,23 @@ global $user;
             
         </div>
         <div class="advent-calendar-modal-body">
-            <div class="advent-calendar-modal-body-text" style="height: 41%;"></div>
+            <div class="advent-calendar-modal-body-text"></div>
             <div class="advent-calendar-modal-contact-form" >
                 <form style="display:none">
-                    <input name="Name" placeholder="Dit Fulde navn" type="text">
+                    <h2><?php echo t("Deltag i vores jule konkurrence") ?></h2>
+                    <input name="Navn" placeholder="Dit Fulde navn" type="text">
                     <input name="Email" placeholder="Email" type="text">
                     <input name="Tlf" placeholder="Telefon nummer" type="text">
                     <textarea name="Text" placeholder="Skriv dit svar her" rows="5" resizable="true"></textarea>
                     <input type="hidden" name="Dayindex" id="Dayindex" type="text">
-                    <a class="btn advent-calendar-modal-submit-contact-form">Indsend!<a/>
+                    <a class="btn advent-calendar-modal-submit-contact-form">Indsend!</a>
                 </form>
             </div>
             <div class="advent-calendar-modal-contact-form-msg" style="display:none"></div>
         </div>
 
         <div class="advendt-calendar-close-button">
-            <img title="Luk" src="/sites/all/modules/custom/oc_advent_calendar/images/close-icon.png">
+            <img title="Luk" src="/sites/all/modules/custom/oc_advent_calendar/images/close-icon.png" />
 	</div>
    </div>
 </div>

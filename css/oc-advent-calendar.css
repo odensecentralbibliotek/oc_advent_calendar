@@ -96,11 +96,18 @@
      position: absolute;
     overflow: hidden;
     padding-top:10px;
-    width: 90%;
-    text-align: center;
     color: white;
     font-size: 16px;
-    height: 90%;
+    background-color: #ae1e06;
+    padding: 10px;
+    width: 92%;
+    min-height: 20%;
+}
+.advent-calendar-modal-body-text
+{
+    min-height: 20%;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .advent-calendar-modal-body-text a:link,.advent-calendar-modal-body-text a:visited
 {
@@ -115,13 +122,13 @@
     bottom: 0px;
     right: 0px;
     width: 600px;
-    height: 460px;
+    height: auto;
     max-width: 95%;
     max-height: 95%;
     margin: auto;
     padding: 20px;
     border-radius: 8px;
-    background-color: #ae1e06;
+    
 }
 .advendt-calendar-close-button
 {
@@ -188,9 +195,12 @@
 {
     display:none;
 }
+.advent-calendar-modal-contact-form{
+    text-align: center;
+}
 .advent-calendar-modal-contact-form form input,.advent-calendar-modal-contact-form form textarea
 {
-    width:100%;
+    width:90%;
 }
 .advent-calendar-modal-contact-form form textarea{
    resize: vertical; 
@@ -198,6 +208,7 @@
 .advent-calendar-modal-contact-form-msg
 {
     display:none;
+    text-align: center;
 }
 @keyframes snow {
 0% {

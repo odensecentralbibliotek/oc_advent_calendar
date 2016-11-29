@@ -42,7 +42,7 @@ function oc_advent_calendar_contact_form()
     /*
      * Send a email to the competition managers.
      */
-    if(isset($_GET['Email']) && $_GET['Dayindex'] && $_GET['Name'] && $_GET['Text'] && $_GET['Tlf'])
+    if(isset($_GET['Email']) && $_GET['Dayindex'] && $_GET['Navn'] && $_GET['Text'] && $_GET['Tlf'])
     {
      $from = $_GET['Email'];
      $my_module = 'oc_advent_calendar';
@@ -51,7 +51,7 @@ function oc_advent_calendar_contact_form()
                 'id' => $my_module . '_' . $my_mail_token,
                 'to' => 'tfpet@odense.dk',
                 'subject' => $_GET['Dayindex'] ." december",
-                'body' => array($_GET['Name']." svarer:<br/><br/>".$_GET['Text'] + "<br/><br/> Telefon: " + $_GET['Tlf']),
+                'body' => array($_GET['Navn']." svarer:<br/><br/>".$_GET['Text'] + "<br/><br/> Telefon: " + $_GET['Tlf']),
                 'headers' => array(
                     'From' => $from,
                     'Sender' => $from,
