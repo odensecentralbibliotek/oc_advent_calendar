@@ -53,7 +53,7 @@ global $user;
                     <input name="Tlf" placeholder="Telefon nummer" type="text">
                     <textarea name="Text" placeholder="Skriv dit svar her" rows="5" resizable="true"></textarea>
                     <input type="hidden" name="Dayindex" id="Dayindex" type="text">
-                    <a class="btn advent-calendar-modal-submit-contact-form">Indsend!</a>
+                    <a class="btn advent-calendar-modal-submit-contact-form">Send</a>
                 </form>
             </div>
             <div class="advent-calendar-modal-contact-form-msg" style="display:none"></div>
