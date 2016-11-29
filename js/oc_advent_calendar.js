@@ -84,7 +84,7 @@ jQuery(document).ready(function($){
                 $('.advent-calendar-modal-contact-form form').css('display','none');
             }
         }
-        else if($.inArray(current_day_index,competitions_participated) !== -1 && has_competition === "-1")
+        else if(has_competition === "-1")
         {
             $('.advent-calendar-modal-contact-form-msg').text(Drupal.t('Konkurrencen er ikke længere aktiv'));
             $('.advent-calendar-modal-contact-form-msg').toggle();
