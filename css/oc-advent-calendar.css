@@ -108,6 +108,8 @@
     min-height: 20%;
     margin-bottom: 20px;
     margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .advent-calendar-modal-body-text a:link,.advent-calendar-modal-body-text a:visited
 {

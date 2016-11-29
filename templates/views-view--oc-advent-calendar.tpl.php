@@ -47,8 +47,8 @@ global $user;
             <div class="advent-calendar-modal-body-text"></div>
             <div class="advent-calendar-modal-contact-form" >
                 <form style="display:none">
-                    <h2><?php echo t("Deltag i vores jule konkurrence") ?></h2>
-                    <input name="Navn" placeholder="Dit Fulde navn" type="text">
+                    <h2><?php echo t("Send dit svar") ?></h2>
+                    <input name="Navn" placeholder="Dit navn" type="text">
                     <input name="Email" placeholder="Email" type="text">
                     <input name="Tlf" placeholder="Telefon nummer" type="text">
                     <textarea name="Text" placeholder="Skriv dit svar her" rows="5" resizable="true"></textarea>
