@@ -205,6 +205,7 @@
 .advent-calendar-modal-contact-form form input,.advent-calendar-modal-contact-form form textarea
 {
     width:90%;
+    color:black;
 }
 .advent-calendar-modal-contact-form form textarea{
    resize: vertical; 
