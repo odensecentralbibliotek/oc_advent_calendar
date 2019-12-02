@@ -51,7 +51,7 @@
     -ms-transform-origin: left;  
     transform-origin: left;
 }*/
-/*.advent-calendar-gate-open
+.advent-calendar-gate-open
 {
     -webkit-transform: rotateY(85deg);  
     -ms-transform: rotateY(85deg);  
@@ -63,7 +63,7 @@
     -moz-transition: all 500ms ease-out!important;
     -o-transition: all 500ms ease-out!important;
     transition: all 500ms ease-out!important;
-}*/
+}
 
 .advent-calendar-modal-body
 {
