@@ -6,7 +6,15 @@
     background-color: #ae1e06;
     text-align: center;
 }
-
+.advendt-calendar-close-button
+{
+    width:10px;
+    height: 10px;
+}
+.advent-calendar-can-open
+{
+    cursor: pointer;
+}
 .advent-calendar-gate-wrapper
 {
     width: 23%;
