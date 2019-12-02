@@ -51,9 +51,12 @@
     -ms-transform-origin: left;  
     transform-origin: left;
 }*/
-.advent-calendar-gate-open
+/*
+these transistions breaks on iphone..
+*/
+/*.advent-calendar-gate-open
 {
-    -webkit-transform: rotateY(85deg);  
+   
     -ms-transform: rotateY(85deg);  
     transform: rotateY(85deg);
     -webkit-transform-origin: left;  
@@ -63,7 +66,7 @@
     -moz-transition: all 500ms ease-out!important;
     -o-transition: all 500ms ease-out!important;
     transition: all 500ms ease-out!important;
-}
+}*/
 
 .advent-calendar-modal-body
 {
