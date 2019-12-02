@@ -36,15 +36,18 @@ global $user;
 <?php if ($footer): ?>
 <?php print $footer; ?>
 <?php endif;?>
-<div class="advent-calendar-modal-wrapper">
-            <div id="snow">
-        </div>
-    <div class="advent-calendar-modal-content-wrap">
-        <div class="advent-calendar-modal-header">
-            
-        </div>
-        <div class="advent-calendar-modal-body">
-            <div class="advent-calendar-modal-body-text"></div>
+
+<div id="advent-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content advent-calendar-modal-body">
+      <div class="modal-header">
+        <span class="modal-title"></span>
+        <button type="button" class="close advent-calendar-modal-body advendt-calendar-close-button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body advent-calendar-modal-wrapper ">
+      <div class="advent-calendar-modal-body-text"></div>
             <div class="advent-calendar-modal-contact-form" >
                 <form style="display:none">
                     <h2><?php echo t("Send dit svar") ?></h2>
@@ -53,14 +56,14 @@ global $user;
                     <input name="Tlf" placeholder="Telefon nummer" type="text">
                     <textarea name="Text" placeholder="Skriv dit svar her" rows="5" resizable="true"></textarea>
                     <input type="hidden" name="Dayindex" id="Dayindex" type="text">
-                    <a class="btn advent-calendar-modal-submit-contact-form">Send</a>
+                    <a class="btn advent-calendar-modal-submit-contact-form" style="width:91%;background-color: black;color: white;">Send</a>
                 </form>
             </div>
             <div class="advent-calendar-modal-contact-form-msg" style="display:none"></div>
-        </div>
-
-        <div class="advendt-calendar-close-button">
-            <img title="Luk" src="/sites/all/modules/custom/oc_advent_calendar/images/close-icon.png" />
-	</div>
-   </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="background-color:black;" class="btn btn-secondary advendt-calendar-close-button" data-dismiss="modal">Luk</button>
+      </div>
+    </div>
+  </div>
 </div>

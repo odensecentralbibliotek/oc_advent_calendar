@@ -20,15 +20,14 @@ jQuery(document).ready(function($){
     $('.advent-calendar-can-open-staff').unbind('click');
     $('.advent-calendar-can-open-staff').click(advant_gate_open);
     $('.advendt-calendar-close-button').click(function(){
-         $('.advent-calendar-modal-wrapper').fadeOut(600,function(){
             // $('.advent-calendar-modal-wrapper').toggleClass('advent-calendar-modal-wrapper-show');
              $('.advent-calendar-gate-open').toggleClass('advent-calendar-gate-open');
-         });
     });
     /*
      * Click event for advent contact form submit.
      */
     $('.advent-calendar-modal-submit-contact-form').click(function(){
+        debugger;
         $('.advent-calendar-modal-contact-form-msg').empty();
         if(!advent_form_validate())
         {
@@ -94,20 +93,23 @@ jQuery(document).ready(function($){
            $('.advent-calendar-modal-contact-form form').css('display','block');
         
         }
-        
+        debugger;
         var modalbody = $(this).find('.advent-calendar-day-content-modal').html();
         $('.advent-calendar-modal-wrapper').find('.advent-calendar-modal-body-text').html(modalbody);
         
         $day_index =  $(this).find('.advent-calendar-enable-contact-day-index').html();
         $('.advent-calendar-modal-wrapper').find('#Dayindex').val($day_index);
         
-        setTimeout(function(){ 
+        $('#advent-modal').find('.modal-title').html($day_index+" December");
+
+        /*setTimeout(function(){ 
         //$('.advent-calendar-modal-wrapper').toggleClass('advent-calendar-modal-wrapper-show');
         $('.advent-calendar-modal-wrapper').fadeIn('600');
-        }, 700);
+        }, 700);*/
         /*
          * Trigger a Dialog
          */
+        $('#advent-modal').modal('show');
     }
     /*
      * Validate form submit , before sending to server.
