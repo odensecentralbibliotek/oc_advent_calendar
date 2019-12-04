@@ -146,7 +146,7 @@ these transistions breaks on iphone..
 .advent-calendar-modal-contact-form form input,.advent-calendar-modal-contact-form form textarea
 {
     width:90%;
-    color:black;
+    color: #0b7787;
 }
 .advent-calendar-modal-contact-form form textarea{
    resize: vertical; 

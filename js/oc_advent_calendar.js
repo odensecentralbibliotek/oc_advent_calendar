@@ -100,7 +100,7 @@ jQuery(document).ready(function($){
         $day_index =  $(this).find('.advent-calendar-enable-contact-day-index').html();
         $('.advent-calendar-modal-wrapper').find('#Dayindex').val($day_index);
         
-        $('#advent-modal').find('.modal-title').html($day_index+" December");
+        $('#advent-modal').find('.modal-title').html($day_index+". december");
 
         /*setTimeout(function(){ 
         //$('.advent-calendar-modal-wrapper').toggleClass('advent-calendar-modal-wrapper-show');
