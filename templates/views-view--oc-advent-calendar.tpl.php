@@ -56,13 +56,13 @@ global $user;
                     <input name="Tlf" placeholder="Telefon nummer" type="text">
                     <textarea name="Text" placeholder="Skriv dit svar her" rows="5" resizable="true"></textarea>
                     <input type="hidden" name="Dayindex" id="Dayindex" type="text">
-                    <a class="btn advent-calendar-modal-submit-contact-form" style="width:91%;background-color: black;color: white;">Send</a>
+                    <a class="btn advent-calendar-modal-submit-contact-form" style="width:91%;background-color: #0b7787;color: white;">Send</a>
                 </form>
             </div>
             <div class="advent-calendar-modal-contact-form-msg" style="display:none"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" style="background-color:black;" class="btn btn-secondary advendt-calendar-close-button" data-dismiss="modal">Luk</button>
+        <button type="button" style="background-color:#0b7787;" class="btn btn-secondary advendt-calendar-close-button" data-dismiss="modal">Luk</button>
       </div>
     </div>
   </div>
