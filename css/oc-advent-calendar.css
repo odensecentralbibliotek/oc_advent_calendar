@@ -105,6 +105,7 @@ these transistions breaks on iphone..
     -o-transition: all 500ms ease-out;
     transition: all 500ms ease-out;
 }*/
+/*
 #snow {
   top: -100%;
   bottom: -50px;
@@ -120,6 +121,7 @@ these transistions breaks on iphone..
   animation: snow 20s linear infinite;
   position: absolute;
 }
+*/
 .oc-advent-view-header {
   margin-bottom: 10px;
   padding: 10px;
